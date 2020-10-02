@@ -1,0 +1,52 @@
+/* Display a grid using this class */ 
+/* Display a grid using this class */ /* grid-template-rows == gridRows grid-template-columns == girdColumns */
+
+.grid-wrapper{ 
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 3fr 3fr 2.5fr;
+    padding: 3px;
+    border: 1px solid;
+    grid-template-areas:
+        "headerarea     headerarea    internav"
+        "contentbox     othercontent  internav"
+        "contentbox     othercontent  internav"
+        "bottoms        bottoms       bottoms";
+}
+
+.headerarea{
+    grid-area: headerarea;
+    background-color: rgb(211, 120, 143);
+    margin: 5px;
+    padding: 35px;
+}
+
+.internav{
+    padding: 30px;
+}
+
+.contentbox{
+    grid-area: contentbox;
+    background-color: blanchedalmond;
+    margin: 5px;
+    padding: 25px;
+}
+
+.othercontent{
+    grid-area: othercontent;
+    background-color: blanchedalmond;
+    margin: 5px;
+    padding: 35px;
+}
+
+.bottom{
+    grid-area: bottoms;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    border: 10px;
+    margin-left: 20px;
+    padding: 35px;
+    
+}
